@@ -1,0 +1,20 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+    <h1>Objetivo del Doctorado</h1>
+    
+    <div>
+        {% for p in ObjParrafo %}
+            
+                <p class="text-justify">
+                    
+                    {{p.ObjParrafo}}
+                </p>
+           
+        {% endfor %}
+
+      
+        
+    </div>
+{% endblock %}
+

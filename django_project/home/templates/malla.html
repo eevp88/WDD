@@ -1,0 +1,314 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+    <h1>Malla Curricular Doctorado en Derecho</h1>
+    <br>
+    
+    
+    
+
+
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre I</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+            <tbody>
+            
+            {% for i in cursoS1 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %}  
+
+            </tbody>
+        </table>   
+        </br> 
+
+
+          <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre II</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS2 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br> 
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre III</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS3 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br> 
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre IV</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS4 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br> 
+
+
+        
+         <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>SALIDA ALTERNATIVA</strong></th>
+           </thead>
+                     
+            <tbody> 
+                <tr bgcolor="lightgray">
+                      <td class= "mallaSem" colspan="3"   align="center"><strong>MAGÍSTER EN CONSTITUCIONALISMO Y DERECHO</strong></td>
+                </tr>
+
+                <tr style="  background: lightgray;" bgcolor="lightgray">
+                      <td class= "mallaSem" colspan="3"   align="center"><strong>(21 asignaturas mínimo = 72 créditos)</strong></td>
+                </tr>
+          
+            </tbody> 
+        </table>   
+        </br>
+
+
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre V</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS5 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br>
+
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre VI</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS6 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br> 
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>Semestre VII</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS7 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br> 
+
+        <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" text-align="center"><strong>Semestre VIII</strong></th>
+                </tr>
+                <tr bgcolor="lightgray">
+                   <th width="85" colspan="1" align="center"><strong>Créditos</strong></th>
+                   <th colspan="1" align="center"><strong>Asignatura</strong></th>
+                   <th width="200" colspan="1" align="center"><strong>Tipo</strong></th>
+                </tr>
+           </thead>
+           
+          
+            <tbody>
+            {% for i in cursoS8 %}    
+
+                <tr>
+                    <td colspan="1" bgcolor="" align="center">{{ i.creditos }}</td>
+                    <td colspan="1" bgcolor="" align="center"><b>{{ i.nombre }}</b> </td>
+                    <td rowspan="1" bgcolor="" align="center">{{i.tipo}} </strong></td>
+                </tr>
+
+
+               
+            {% empty %}
+                <div>No hay Cursos todavía.</div>
+            {% endfor %} 
+            </tbody> 
+        </table>   
+        </br> 
+
+
+         <table border="0" cellspacing="0" cellpadding="5" width="100%">
+        
+           <thead>
+                <tr bgcolor="lightgray">
+                    <th class= "mallaSem" colspan="3" align="center"><strong>TOTAL DE CRÉDITOS</strong></th>
+           </thead>
+                     
+            <tbody> 
+                <tr bgcolor="lightgray">
+                      <td class= "mallaSem" colspan="3"   align="center"><strong>216</strong></td>
+                </tr>
+
+                 
+          
+            </tbody> 
+        </table>   
+        </br>
+    
+{% endblock %}

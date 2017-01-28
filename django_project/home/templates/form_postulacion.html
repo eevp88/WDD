@@ -1,0 +1,192 @@
+{% extends 'base2.html' %}
+
+
+{% block content %}
+
+	
+    <h2>Postulación al Doctorado </h2>
+
+
+
+	<form  method="POST" name="formulario" enctype="multipart/form-data">
+		{% csrf_token %}
+	    
+		<label for="nombre">Nombres <font color="red">*</font>:</label>
+		<input type="text" name="nombre" required>
+
+		<label for="apellidoP">Apellido Paterno<font color="red">*</font>:</label>
+		<input type="text" name="apellidoP" required>
+
+		<label for="apellidoM">Apellido Materno<font color="red">*</font>:</label>
+		<input type="text" name="apellidoM" required>
+		
+		<label for="nacionalidad">Nacionalidad<font color="red">*</font>:</label>
+		<input type="text" name="nacionalidad" required>
+
+		<label for="fecha_Nacimiento">Fecha de Nacimiento<font color="red">*</font>:</label>
+		<input type="text" class="fecha" id="fecha_Nacimiento" name="fecha_Nacimiento" placeholder="AAAA-MM-DD" required>
+
+		<label for="estado_civil">Estado Civil<font color="red">*</font>:</label>
+		<input type="text" name="estado_civil" required>
+
+		<label for="rut">Rut o Número de identificación<font color="red">*</font>:</label>
+		<input type="text" name="rut" required>
+
+		<label for="email">Correo Electrónico<font color="red">*</font>:</label>
+		<input type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+
+
+		<label for="telefono">Telefono<font color="red">*</font>:</label>
+		<input type="tel"  id ="tel" name="telefono" placeholder="+56911111111" maxlength="15" required>
+
+		<label for="provincia_procedencia">Provincia de Procedencia<font color="red">*</font>:</label>
+		<input type="text" name="provincia_procedencia" required>
+		
+		<label for="comuna_procedencia">Comuna de Procedencia<font color="red">*</font>:</label>
+		<input type="text" name="comuna_procedencia" required>
+		
+		<label for="domiciliio_procedencia">Domicilio de Procedencia<font color="red">*</font>:</label>
+		<input type="text" name="domiciliio_procedencia" required>
+
+		<label for="ocupacion_actual">Ocupacion Actual<font color="red">*</font>:</label>
+		<input type="text" name="ocupacion_actual" required>
+	
+		<label for="grado_academico">Grado Académico<font color="red">*</font>:</label>
+		<input type="text" name="grado_academico" required>
+
+		<label for="fecha_obtencion_grado">Fecha de Obtención del Grado Académico<font color="red">*</font>:</label>
+		<input type="text" class="fecha" id="fecha_obtencion_grado" name="fecha_obtencion_grado" placeholder="AAAA-MM-DD" required>
+   	
+		<label for="promedio_final_tras_examen_grado">Promedio Final tras Examen de Grado<font color="red">*</font>:</label>
+		<input type="text" name="promedio_final_tras_examen_grado" required>
+   		
+		<label for="universidad_procedencia">Universidad de Procedencia<font color="red">*</font>:</label>
+		<input type="text" name="universidad_procedencia" required>
+		
+		<label for="postulo">Postulo a<font color="red">*</font>:</label>
+		<input type="text" name="postulo" required>
+   	    
+				
+   	    	<div id="contenedor_cv_academico_profecional"style="margin-bottom: 12px;" >
+		<label for="cv_academico_profecional">Curriculum  Vitae Académico Profecional<font color="red">*</font>:</label>
+		<input type="file" id="cv_academico_profecional" name="cv_academico_profecional" class="input-file"  accept="application/pdf" required>
+		<p id="error" style="margin-bottom: 0px;"></p>
+		<p style="font-family: serif; font-size: 13px;">Solo archivos con extencion ".pdf ", con un tamaño maximo de 3MB.</p>
+		</div>
+
+		<div  id="contenedor_carta_postulacion"style="margin-bottom: 12px;">
+		<label for="carta_postulacion">Carta de Motivación e Intenciones de su Postulación<font color="red">*</font>:</label>
+		<input type="file" id="carta_postulacion" name="carta_postulacion" class="input-file" accept="application/pdf" required>
+		<p style="font-family: serif; font-size: 13px;">Solo archivos con extencion ".pdf ", con un tamaño maximo de 3MB.</p>
+		</div>
+
+		<div id="contenedor_certificados_grado_concentracion_notas_pre_postgrado"style="margin-bottom: 12px;">
+		<label for="certificados_grado_concentracion_notas_pre_postgrado">Certificados Grado y Concentración de Notas de Pregado y Postgrado<font color="red">*</font>:</label>
+		<input type="file" id="certificados_grado_concentracion_notas_pre_postgrado" name="certificados_grado_concentracion_notas_pre_postgrado"  class="input-file" accept="application/pdf" required> 
+		<p style="font-family: serif; font-size: 13px;">Solo archivos con extencion ".pdf ", con un tamaño maximo de 3MB.</p>
+		</div>
+		
+
+		<div id="contenedor_otros_certificados" style="margin-bottom: 12px;">
+		<label for="otros_certificados">Otros Certificados Relativos a Experiencia Profesional o Académica:</label>
+		<input type="file"  id="otros_certificados" name="otros_certificados" class="input-file" accept="application/pdf">
+		<p style="font-family: serif; font-size: 13px;">Solo archivos con extencion ".pdf ", con un tamaño maximo de 3MB.</p>
+		</div>
+
+
+
+		<div id="contenedor_otros_documentos" style="margin-bottom: 12px;">
+		<label for="otros_documentos">Otros Documentos Pertinentes a su Postulación:</label>
+		<input type="file" id="otros_documentos" name="otros_documentos" class="input-file" accept="application/pdf"> 
+		<p style="font-family: serif; font-size: 13px;">Solo archivos con extencion ".pdf ", con un tamaño maximo de 3MB.</p>
+		</div>
+
+		
+		
+	    <input type="submit"  class="button radius" id="btn" value="Enviar Postulación" />
+	</form>
+
+	<p style="font-family: serif; font-size: 13px;">(<font color="red">*</font>) Campos Obligatorios</p>
+
+   
+{% endblock %}
+
+{% block js %}
+
+
+		<script type="text/javascript">
+
+
+		 	$(function() {
+		 		$( ".fecha" ).datepicker({
+		 			changeMonth: true,
+		 			changeYear: true,
+		 			autoSize: true,
+		 			dateFormat: "yy-mm-dd",
+		 			 firstDay: 1,
+		 			monthNamesShort:["Ene","Feb","Mar","Abr", "May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+		 			monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+		 			yearRange :"1916:2016",
+		 			dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+ 					dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+ 					dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+
+
+		 		});
+  			});
+ 		</script>
+
+ 		<script type="text/javascript">
+	    	window.onload = function(){
+	    		var boton = document.getElementById("btn");
+	    		var archivos =["cv_academico_profecional",
+	    						"carta_postulacion", 
+	    						"certificados_grado_concentracion_notas_pre_postgrado",
+	    						"otros_certificados",
+	    						"otros_documentos"
+	    						];
+	    		console.log(archivos);
+	    		boton.onclick = function(){
+	    			for (var i in archivos){
+	    				console.log(archivos[i]+":"+ i);
+	    				var doctumentos = document.getElementById(archivos[i]).files;
+	    				console.log(doctumentos);
+	    				if(doctumentos.length == 0){
+	    					var etiqueta = (document.getElementById(archivos[i])).id;
+
+	    					if((etiqueta != "otros_certificados") &&  (etiqueta != "otros_documentos")){
+	    						alert("La subida del archivos "+ archivos[i] +" es requerida");
+	    						return;
+	    					}
+	    					
+	    						
+	    					
+	    				}
+	    				else{
+	    					for(x = 0; x < doctumentos.length; x++){
+	    						if (doctumentos[x].type != "application/pdf"){ //&& doctumentos[x].type != "image/jpg" && doctumentos[x].type != "image/jpeg" && doctumentos[x].type != "image/gif"){
+	    							alert("El archivo " + doctumentos[x].name + " no es un PDF");
+	    							return;
+	    							
+	    						}
+	    						if (doctumentos[x].size > 1024*1024*3){
+	    							alert("El Archivo: " + doctumentos[x].name + " supera el tamaño máximo permitido 3MB");
+	    							return;
+	    							
+	    						}
+	    					}
+	    				}
+	    			}			    			
+	    			document.formulario.submit();
+	    		}
+	    	}	 
+		</script>
+
+
+
+
+
+		
+
+	{% endblock js %}
+

@@ -1,0 +1,18 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+    <h1>Perfil de Graduación</h1>
+    
+    <div>
+    	<ul class="disc">
+        {% for p in PerfParrafo %}
+        	<li>
+        		<p class="text-justify">
+        			{{p.PerfParrafo}} 
+        		</p>
+        	</li>   
+        {% endfor %}
+    	</ul>        
+    </div>
+{% endblock %}
+

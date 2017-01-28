@@ -1,0 +1,14 @@
+{% extends 'principal_base.html' %}
+
+{% block content %}
+
+    <h2> Panel Principal  </h2>
+    <br>
+    <div class="panel clearfix ">
+        <div class=""><a href="{% url 'carpetas_list' %}" class="button expand radius  large" >Cursos</a></div>
+        <br>
+        <div class=""><a href="{% url 'home' %}" class="button expand radius large" >Home Doctorado en Derecho</a></div>       
+    </div>
+        
+  
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'principal_base.html' %}
+{% block content %}
+    <br/>   
+    <section>
+    	<h1 style="font-size: 34px;">{{ object.curso }}</h1>
+    	<h6 class="">Prof(a). {{object.profesor.usuario.user.first_name}} {{object.profesor.usuario.user.last_name}} - Semestre {{ object.curso.semestre }} </h6>    	
+    </section>
+    <section>
+	    <div class="panel radius">
+	    	<table style="width:100%; ">
+		    	<thead>
+		    		<tr>
+		    			<th width="200" >N°</th>
+		    			<th>Nombre</th>
+		    			<th width="150">Descarga</th>
+		  			</tr>
+		    	</thead>
+	  			
+	  				{% for archivo in object.archivo_set.all %}
+	  				<tr>
+	    				<td>{{ archivo.id }}</td>
+	    				<td>{{archivo}}</td>
+	    				<td><a href="{{MEDIA_URL}}{{ archivo.archivo }}" class="icon-download" style="font-size:24px;"></a></td>
+	    			</tr>	
+	    			{% empty %}
+	    				<div>No hay tracks todavía.</div>
+	            {% endfor %}
+	  			
+			</table>  
+			<a href="{% url 'carpetas_list' %}" class="button expand  round ">Volver a lista de Cursos</a>      	        	      
+	    </div>
+    </section> 
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+    <h1>Profesores</h1>
+    <br>
+    
+   
+        {% for profesores in object_list %}
+
+
+        <article class="song">
+            <figure class="image">
+               <img src="{{ profesores.fotoAvatar.url }}" alt="{{ profesores.nombre }}" width="125" height="125" />
+            </figure>
+            <h5><a href="{{ profesores.cvlink }}">{{profesores.nombre}}</a></h5>
+            
+        </article>
+
+
+
+            
+            
+        {% empty %}
+            <div>No hay álbumes todavía.</div>
+        {% endfor %}
+    
+{% endblock %}

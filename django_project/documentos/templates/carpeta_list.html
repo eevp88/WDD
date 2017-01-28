@@ -1,0 +1,31 @@
+{% extends 'principal_base.html' %}
+{% block content %}
+    <h2> Cursos </h2>
+     <section>
+            <div class="panel radius">
+                <table style="width:100%; ">
+                        <thead>
+                                <tr>
+                                        <th width="70" >N°</th>
+                                        <th>Curso</th>
+                                        <th width="80">Detalles</th>
+                                        </tr>
+                        </thead>
+                                
+                                        {% for folder in object_list %}
+                                        <tr>
+					<td>{{ folder.id }}</td>
+                                        <td>{{folder.curso}}  Prof(a). {{folder.profesor.usuario.user.first_name}} {{folder.profesor.usuario.user.last_name}}</td>
+                                        <td><a href="{{folder.curso.pk}}" class="icon-folder" style="font-size:30px;"></a></td>
+					</tr>
+                                {% empty %}
+                                        <div>No hay Cursos  todavía.</div>
+                    {% endfor %}
+                                
+                        </table>
+                        <a href="{% url 'principal' %}" class="button expand  round ">Volver al Panel  Principal</a>
+            </div>
+    </section>
+   
+  
+{% endblock %}

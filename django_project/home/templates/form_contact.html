@@ -1,0 +1,20 @@
+{% extends 'base2.html' %}
+
+
+{% block content %}
+    <h2>Contacto</h2>
+
+	{% if is_send %}
+		<h3>Mensaje enviado Correctamente!!!</h3>
+	{% endif %}
+
+
+	<form action="" method="post">{% csrf_token %}
+	    {{ form.as_p }}
+	    <input type="submit"  class="button radius"value="Enviar Mensaje" />
+	</form>
+   
+{% endblock %}
+
+
+

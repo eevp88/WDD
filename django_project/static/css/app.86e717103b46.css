@@ -1,0 +1,175 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+.errorlist{
+	list-style: none;
+	color: #2795b6;
+
+}
+
+.mallaSem{
+	text-align: center;
+}
+.m-l{
+	margin-right: 1em;
+}
+
+.m-r{
+	
+	margin-left: 2em;
+}
+.top-bar{
+	margin-top: 10px;
+	margin-bottom:0;
+}
+
+.oh{
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+.titulop{
+	margin: 0;
+	top :.6em;
+	padding-bottom: 15px
+}
+a
+	:link {
+		text-decoration:none;
+		color:#222;} 
+	:visited {
+		text-decoration:none;
+		color:#222;} 
+	:active {
+		text-decoration:none;
+		color:#222;} 
+	:hover {text-decoration:none;
+		color:#222;} 
+
+li.has-button a:visited {
+		text-decoration:none;
+		color:#FFF;
+} 
+
+.song{
+	display:inline-block;
+    font-size: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    text-align: center;
+    width: 11em;
+}
+
+
+.song :nth-child(even){
+	margin-right:0; 
+}
+        
+    
+
+.song p{
+	margin: .5em  0;}
+
+
+
+.nav-bar{
+	margin-top: auto;
+	background: #222;
+	color: white;
+}
+
+.top-bar ul>li.has-button a.button {
+     margin: 4px 11.25px;
+}
+
+a.button.radius{
+	display: block;}
+
+	
+a{
+	color: #222;
+}
+
+ul.nav-bar{
+	margin-top: 0px;
+}
+
+
+
+@media only screen and (max-width: 940px) {
+    
+   
+    .titulop{
+    	padding-bottom: 1em;
+    	top:.2em;
+    }
+    .imagenC{
+    	margin-top: 1.3em;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+            
+  	.m-l{
+    	float: left;
+    }
+    .m-r{
+    	float: left;
+    }
+
+    
+    .titulop{
+    	padding-bottom: 15px;
+    	top:.2em;
+    }
+
+}
+
+@media only  screen and (max-width: 342px) {
+    .m-r{
+    	  margin-left: 1em;
+    }
+
+
+}
+
+@media only  screen and (max-width: 328px) {
+    .m-r{
+    	  margin-left: 0em;
+    	  margin-top: 1em;
+    }
+
+
+}
+
+/* -----------------------------------------
+   Shared Styles
+*body{
+	font-size: 16px
+}
+/ul{
+	padding-left: 1em;
+}
+*/
+
+/* -----------------------------------------
+   icon font
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

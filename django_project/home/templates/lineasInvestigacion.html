@@ -1,0 +1,29 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+    <h2>Línea de Investigación</h2>
+    
+    <div>
+
+    	{% for i in textoLineas %}
+    		<p> {{ i }} </p>
+    		{% ifequal forloop.counter 2%}
+            <p>
+    			<ul class="disc">
+			        {% for p in lineaInvestigacion %}
+			            
+			                <li class="text-justify"> {{ p }} </li>
+			           
+			        {% endfor %}
+	        	</ul>
+	        {% endifequal %}
+                
+            </p>
+	        
+        {% endfor %}
+
+        
+        
+    </div>
+{% endblock %}
+
